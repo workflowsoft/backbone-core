@@ -139,3 +139,27 @@ backbone-core
 Соответственно шаблон вью объявляется через переменную `templateUrl`, которая ведет из папки с `app`. Пример: `templateUrl: 'Templates/index.html'`
 
 	  
+ - Обсерватория - глобальная шина событий.
+__Пример:__
+1. Выстреливает глобальное событие `event_name` и передает в обработчик два аргумента;
+
+         core.observatory.trigger('event_name', [argument1, argument2]);
+
+1. Создание обработчика на глобальное событие `event_name`, который принимает в качестве
+аргументов объект _jQuery_ события и два аргумента переданные при выстреливании события
+
+         core.observatory.on('event_name', function(event, argument1, argument2) {
+             code here
+         });
+
+ 1. Создание обработчика на глобальное событие `event_name`, который принимает в качестве
+ аргументов объект _jQuery_ события и два аргумента переданные при выстреливании события,
+ а так же обработчик вызывается с указаным контекстом (передается третьим аргументом)
+
+         core.observatory.on('event_name', function(event, argument1, argument2) {
+             code here
+         }, this);
+
+ 1. Отписываемся от события
+
+         core.observatory.off('event_name');
