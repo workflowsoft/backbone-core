@@ -18,7 +18,8 @@ require([
 	'Router/workspace',
 	'Views/workspace',
 	'Views/index',
-	'Models/index'
+	'Models/index',
+	'Collections/tasks'
 ], function ( App, Appflow, Workspace) {
 	Appflow.init();
 });

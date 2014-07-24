@@ -22,7 +22,7 @@ define([
 
 
 			this.core
-				.set('Index')
+				.set('Index');
 		},
 
 		index: function() {

@@ -1,1 +1,6 @@
-<div class="b">Ну чо, ну чо, прекомпилировал что ли?</div>
+<button class="b-filtering">Нажми и отфильтруй, блядина</button>
+<br>
+
+{{#each data}}
+	<button class="b-div" id="id{{Id}}" data-id="{{Id}}">{{Value}}<i>{{Text}}</i></button>
+{{/each}}

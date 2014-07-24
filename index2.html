@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="angular-app/app.js"></script>
+
+</head>
+<body>
+    <div id="l-content" ng-app="Appflow" ng-controller="IndexController">
+    	<button class="b-filtering" ng-click="filterElements()">Нажми и отфильтруй, блядина</button>
+		<br>
+
+	<button class="b-div" ng-repeat="element in data" ng-click="increaseElement(element)" id="id{{element.Id}}" data-id="{{element.Id}}">{{element.Value}}<i>{{element.Text}}</i></button>
+	 </div>
+</body>
+</html>
